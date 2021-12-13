@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "typ": "A",
+        "dimenzije": {
+            "sirka": "90",
+            "dlzka": "60"
+        }
+    },
+    {
+        "id": 2,
+        "typ": "B",
+        "dimenzije": {
+            "sirka": "80",
+            "dlzka": "60"
+        }
+    },
+    {
+        "id": 3,
+        "typ": "C",
+        "dimenzije": {
+            "sirka": "60",
+            "dlzka": "40"
+        }
+    }
+]
