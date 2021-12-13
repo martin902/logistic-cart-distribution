@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "name": "Ambasador",
+        "cart": "{'A', 'B', 'C'}",
+        "truck": "3500",
+        "city": "Wiene",
+        "zona": "2",
+        "air": "1"
+    },
+    {
+        "id": 1,
+        "name": "Excelsior",
+        "cart": "{'A', 'C'}",
+        "truck": "3500",
+        "city": "Kremnica",
+        "zona": "1",
+        "air": "1"
+    },
+    {
+        "id": 1,
+        "name": "Dormeo",
+        "cart": "{'B', 'C'}",
+        "truck": "3500",
+        "city": "Wiene",
+        "zona": "3",
+        "air": "1"
+    },
+    {
+        "id": 1,
+        "name": "Melboro",
+        "cart": "{'B', 'C'}",
+        "truck": "3500",
+        "city": "Wiene",
+        "zona": "3",
+        "air": "1"
+    },
+    {
+        "id": 1,
+        "name": "Durexseo",
+        "cart": "{'B', 'C'}",
+        "truck": "2500",
+        "city": "St. Petroleum",
+        "zona": "3",
+        "air": "1"
+    }
+]

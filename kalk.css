@@ -1,0 +1,201 @@
+
+btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: Arial;
+    padding-left: 10px;
+}
+.selected {
+    background-color: #80ae7c;
+    border: 1px solid #496447;
+    padding: 2px;
+    margin-left: 10px;
+}
+.content {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-auto-rows: minmax(50px, auto);
+  grid-template-areas:
+    "lg hd hd hd hd hd hd hd ac"
+    "pr pr pr pr pr pr pr pr pr"
+    "au au au au au au au au au"
+    "rp rp rp rp rp rp rp rp rp"
+    "ft ft ft ft ft ft ft ft ft";
+    width: 100%;
+}
+.logo {
+    grid-area: lg;
+    justify-content: left;
+    padding-left: 10px;
+}
+.header {
+    grid-area: hd;
+    justify-content: center;
+    vertical-align: center;
+}
+.actions {
+    grid-area: ac;
+    justify-content: right;
+    padding-right: 20px;
+}
+.logo, .header, .actions {
+  display: flex;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.pradlo {
+    grid-area: pr;
+    justify-content: left;
+    float: left;
+    text-align: left;
+}
+.auto {
+  grid-area: au;
+}
+.report {
+  grid-area: rp;
+}
+.pradlo, .auto, .report {
+    width: 100%;
+    background-color: var(--bg-work);
+    color: var(--text-color);
+}
+
+
+
+
+.help {
+  grid-area: he;
+  color: var(--text-color);
+  display: none;
+}
+
+.footer {
+    grid-area: ft;
+    background: var(--footer);
+    opacity: 0.5;
+    position: fixed; 
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    opacity: 0.5;
+}
+
+:root {
+  --bg-color: #120055;
+  --text-color: #777;
+  
+  --text-color-light: red;
+  --bg-work: #cceec9;
+
+  --bg-selected: #567054;
+  --color-selected: #eee;
+
+  --footer: #ccc;
+
+}
+.content > div.overlay {
+  z-index: 10;
+  grid-column: help-start / help-end;
+  grid-row: help-start / help-end;
+  border: 4px solid #5c940d;
+  background-color: #5c940d66;
+  color: #5c940d;
+  font-size: 150%;
+}
+/* 
+		# <div class="content">
+		# 	<div class="logo">LOGO</div>
+		# 	<div class="header">Header</div>
+		# 	<div class="actions">Actions</div>
+		# 	<div class="menu">Menu</div>
+		# 	<div class="pradlo">Pradlo</div>
+		# 	<div class="pradloprint">Pradlo PRINT</div>
+		# 	<div class="auto">Auto</div>
+		# 	<div class="autoprint">Auto Print</div>
+		# 	<div class="report">Report</div>
+		# 	<div class="footer">Footer</div>
+		# </div>
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(200px, auto);
+    grid-template-areas:
+        "lg he he he he ac"
+        "me in in in in in"
+        "pr pr pp pp pp"
+        "au au ap ap ap"
+        "rp rp rp rp rp"
+        "fo fo fo fo fo";
+    min-height: 100%;
+}
+.logo {
+    grid-area: lg;
+}
+.header {
+    grid-area: he;
+}
+.actions {
+    grid-area: ac;
+}
+.menu {
+    grid-area: me;
+}
+.input {
+    grid-area: in;
+}
+.pradlo {
+    grid-area: pr;
+}
+.pradloprint {
+    grid-area: pp;
+}
+.auto {
+    grid-area: au;
+}
+.autoprint {
+    grid-area: ap;
+}
+.report {
+    grid-area: rp;
+}
+ */
+
+/* .content > div.overlay {
+  z-index: 10;
+  grid-column: me-start / me-end;
+  grid-row: me-start / ft-end;
+  border: 4px solid rgb(92,148,13);
+  background-color: rgba(92,148,13,.4);
+  color: rgb(92,148,13);
+  font-size: 150%;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+body:before {
+  content: "";
+  height: 100%;
+  float: left;
+  width: 0;
+  margin-top: -32767px;
+}
+.footer {
+    background: var(--footer);
+    opacity: 0.5;
+    position: fixed; 
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+} */

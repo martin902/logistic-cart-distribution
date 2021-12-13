@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "vyrobce": "Renault",
+        "ecv": 30,
+        "nosnost": "3500",
+        "vaha": "2000",
+        "vzduch": "A",
+        "dimenzije": {
+            "sirka": "2.4",
+            "dlzka": "6.2"
+        }
+    },
+    {
+        "id": 2,
+        "vyrobce": "MAN",
+        "ecv": 30,
+        "nosnost": "3500",
+        "vaha": "2000",
+        "vzduch": "N",
+        "dimenzije": {
+            "sirka": "2.4",
+            "dlzka": "6.2"
+        }
+    },
+    {
+        "id": 3,
+        "vyrobce": "Citroen",
+        "ecv": 30,
+        "nosnost": "3500",
+        "vaha": "2000",
+        "vzduch": "N",
+        "dimenzije": {
+            "sirka": "2.4",
+            "dlzka": "6.2"
+        }
+    },
+    {
+        "id": 4,
+        "vyrobce": "Peugeot",
+        "ecv": 30,
+        "nosnost": "3500",
+        "vaha": "2000",
+        "vzduch": "N",
+        "dimenzije": {
+            "sirka": "2.4",
+            "dlzka": "6.2"
+        }
+    },
+    {
+        "id": 5,
+        "vyrobce": "Mitcubishi",
+        "ecv": 30,
+        "nosnost": "3500",
+        "vaha": "2000",
+        "vzduch": "N",
+        "dimenzije": {
+            "sirka": "2.4",
+            "dlzka": "6.2"
+        }
+    }
+]

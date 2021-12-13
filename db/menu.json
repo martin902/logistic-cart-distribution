@@ -1,0 +1,44 @@
+[
+    {
+        "id": "0",
+        "option": "home",
+        "text": "Home",
+        "data": "",
+        "img": ""
+    },
+    {
+        "id": "1",
+        "option": "carts",
+        "text": "Voziky",
+        "data": "",
+        "img": "3500"
+    },
+    {
+        "id": "2",
+        "option": "trucks",
+        "text": "Kamiony",
+        "data": "auto.json",
+        "img": "3500"
+    },
+    {
+        "id": "3",
+        "option": "hotels",
+        "text": "Hoteli",
+        "data": "",
+        "img": "holtel.jpg"
+    },
+    {
+        "id": "4",
+        "option": "dose",
+        "text": "Naklad",
+        "data": "",
+        "img": "3500"
+    },
+    {
+        "id": "5",
+        "option": "reporting",
+        "text": "Report",
+        "data": "",
+        "img": "3500"
+    }
+]
