@@ -9,18 +9,18 @@ app.get("/", function (req, res) {
 });
 
 
-const testFolder = __dirname;
-// const testFolder = '/home/martin/Documents/project/build226/public/kalk';
-const fs = require('fs');
-console.log("__dirname", __dirname);
-fs.readdir(testFolder, (err, files) => {
-  files.forEach(file => {
-    console.log(file);
-  });
-});
+// const testFolder = __dirname;
+// // const testFolder = '/home/martin/Documents/project/build226/public/kalk';
+// const fs = require('fs');
+// console.log("__dirname", __dirname);
+// fs.readdir(testFolder, (err, files) => {
+//   files.forEach(file => {
+//     console.log(file);
+//   });
+// });
 
 app.listen(3000, function () {
-    console.log("Server is running on localhost3000");
+    console.log("Server is running kalk.js localhost:3000");
 });
 
 
