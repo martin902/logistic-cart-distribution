@@ -25,12 +25,12 @@ function start() {
     
     d3.select('.help').style('display', 'none'); // help option if requested
 
-    d3.json("menu.json").then(function(data) { window.menu = data; });
+    d3.json("db/menu.json").then(function(data) { window.menu = data; });
     // d3.json("dose.json").then(function(data) { window.dose = data; });
-    d3.json("carts.json").then(function(data) { window.carts = data; });
-    d3.json("trucks.json").then(function(data) { window.trucks = data; });
-    d3.json("hotels.json").then(function(data) { window.hotels = data; });
-    d3.json("reporting.json").then(function(data) { window.reporting = data; });
+    d3.json("db/carts.json").then(function(data) { window.carts = data; });
+    d3.json("db/trucks.json").then(function(data) { window.trucks = data; });
+    d3.json("db/hotels.json").then(function(data) { window.hotels = data; });
+    d3.json("db/reporting.json").then(function(data) { window.reporting = data; });
 
     const dose = require("./dose.json");
 
