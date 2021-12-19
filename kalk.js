@@ -1,5 +1,9 @@
 
 
+var menu = require("./db/menu.json");
+// console.log('menu', menu);
+
+
 const express = require("express");
 const app = express();
 app.use(express.static(__dirname));

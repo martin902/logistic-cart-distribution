@@ -10,11 +10,13 @@ start();
  */
 function start() {
     // show logo with reload option
-    var html = `
-        <a href="#" onclick=location.reload(true);>
-            <img src="img/logo.svg" alt="Logo" width="36">
-        </a>
-        <span class=""></span>`;
+    var html = '';
+    html += `<div class="d-flex align-center align-baseline">`;
+    html +=     `<a class="px-3" href="#" onclick=location.reload(true); style="">`;
+    html +=         `<img src="img/logo.svg" alt="Logo" width="36">`;
+    html +=     `</a>`;
+    html +=     `<span class="fs-5 text-nowrap mt-2">Company name</span>`;
+    html += `</div>`;
     d3.selectAll('.logo').html(html);
 
     // show global action top right corner
@@ -25,14 +27,32 @@ function start() {
     
     d3.select('.help').style('display', 'none'); // help option if requested
 
+// var http = require('http'); // http module
+// var menu = require("./db/menu.json");
+
+
     d3.json("db/menu.json").then(function(data) { window.menu = data; });
     // d3.json("dose.json").then(function(data) { window.dose = data; });
     d3.json("db/carts.json").then(function(data) { window.carts = data; });
-    d3.json("db/trucks.json").then(function(data) { window.trucks = data; });
+
+    // request from http://localhost:5101/trucks
+    let url = "http://localhost:5101/trucks";
+    fetch(url)
+        .then(function(response) {
+            console.log('fetch response trucks', response);
+            return response.json();
+        })
+        .then(function(data) {
+            console.log('fetch data trucks', data);
+            window.trucks = data;
+        })
+        .catch(function(error) {
+            console.log('fetch error trucks', error);
+        });
+    // d3.json("db/trucks.json").then(function(data) { window.trucks = data; });
     d3.json("db/hotels.json").then(function(data) { window.hotels = data; });
     d3.json("db/reporting.json").then(function(data) { window.reporting = data; });
-
-    const dose = require("./dose.json");
+    d3.json("db/dose.json").then(function(data) { window.dose = data; });
 
 
 // getNewFileHandle();
@@ -43,6 +63,7 @@ function start() {
 // }
 
 // const fileHandle = await window.showSaveFilePicker();
+
 // const fileStream = await fileHandle.createWritable();
 // await fileStream.write(new Blob(["CONTENT"], {type: "text/plain"}));
 // await fileStream.close();
@@ -50,7 +71,6 @@ function start() {
     d3.select('.pradlo').html(nove_pradlo());
     d3.select('.auto').html(upload_trucks());
     d3.select('.report').html(reporting());
-
 
 }
 
@@ -245,4 +265,51 @@ function reporting() {
     h += '</div>';
 
     return h;
+}
+
+if(typeof window.dose === 'undefined') {
+    d3.select('.footer').html(`<div class="fs-5">INSERT CART</div>`);
+} else {
+    d3.select('.footer').html(`<div class="fs-5">${window.dose}</div>`);
+}
+
+
+
+/**
+ * description:
+ * - universal fetch to call PHP API with: select, insert, update and delete SQL action
+ * @param {*} url
+ * @param {*} json
+ */
+async function fetch4php(url, json) {
+    console.log("fetch4php: " + url, json);
+    // debugger;    
+    await fetch(url, {
+        url,
+        method: "GET",
+        Headers: {
+            "Content-Type": "application/json",
+            redirect: false,
+        },
+        body: JSON.stringify(json),
+    }).then((response) => {
+        if (response.ok) {
+            response.json().then(
+                function(result) {
+                    window[result.response] = result.data;
+                    // console.log(`window.${result.response} = ${result.data.length} rows`);
+                    // result_fetch2php = result.data;
+                    return response;
+                },
+                function(err) {
+                    // console.log("Failed result.data", err);
+                    return null;
+                }
+            );
+            // window.response = response.json();
+        } else {
+            console.log("fetch4php: response failed; url:" + url + " response: " + response);
+            return false;
+        }
+    });
 }
